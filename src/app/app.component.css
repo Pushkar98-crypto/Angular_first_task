@@ -1,0 +1,22 @@
+.name_inp
+{
+    width: 350px;
+    border-radius: 3px;
+    
+    height: 40px;
+}
+.id_inp
+{
+    width: 350px;
+    border-radius: 5px;
+    
+    height: 40px;
+}
+body
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.head
+{
+    background:lightgreen
+}
