@@ -10,6 +10,7 @@ import { EmployeeModule } from './employee/employee.module';
 import { AdminModule } from './admin/admin.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { AdminModule } from './admin/admin.module';
     LoginModule,
     EmployeeModule,
     AdminModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

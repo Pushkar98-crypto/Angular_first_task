@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Router} from '@angular/router'
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthserviseService {
+export class AuthserviceService {
+
   adminlogin(email: any, pass: any): any{
     if(email== "iamadmin" && pass== "admin@1234" )
     {
@@ -38,6 +39,5 @@ export class AuthserviseService {
 
   }
 
-  constructor(private router:Router) { }
+  constructor( private router:Router) { }
 }
-
