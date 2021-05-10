@@ -25,12 +25,11 @@ export class AppComponent {
      this.id=null
      this.arr.push(info);
      console.log(this.arr);    
-
-    
-
-  }
+   }
   remove(item)
   {
     this.arr.splice(item,1);
   }
+  
+  
 }

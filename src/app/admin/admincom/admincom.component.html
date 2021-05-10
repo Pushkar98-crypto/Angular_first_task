@@ -1,0 +1,106 @@
+
+    <div class="row">
+     <div class="col-3">
+       <div class="sidebar text-center container-fluid " style="background-color:#111743; color:blanchedalmond; height:1000px">
+        <img src="https://image.flaticon.com/icons/png/128/1358/1358600.png">
+        <h3>STAFF-Dsk</h3>    
+        <hr style="background-color:blanchedalmond" width="100%">  
+
+        <br>
+        <br>
+        <button style="width:150px;"><a class="nav-link " href="#">AboutUs</a></button>
+        <br>
+        <br>
+        <button><a class="nav-link " href="#">Announcemnts</a></button>
+      
+       </div>
+
+        
+
+     </div>
+     <div class="col-9">
+         <br>
+         <br>
+       
+           <div class="heading">
+               <h3>Employee Details</h3>
+               <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+               </div>
+            <div class="data_area container">
+                <div class="mb-2">
+                    <label  class="form-label">Name of the Employee</label>
+                    <input type="text" class="form-control"   [(ngModel)]="nam">
+                   
+                  </div>
+                  <div class="mb-2">
+                    <label  class="form-label">Email</label>
+                    <input type="text" class="form-control"  [(ngModel)]="mail">
+                  </div>
+                  <div class="mb-2">
+                      <label class="form-label">Employee ID</label>
+                      <input type="text" class="form-control"  [(ngModel)]="id">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Desgination</label>
+                        <input type="text" class="form-control"  [(ngModel)]="desig">
+                      </div>
+                    
+                      <div class="mb-2">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control"  [(ngModel)]="passw">
+                      </div>
+                    
+                      <br>
+                  <div class="adding" *ngIf="visible" style="text-align: center;">
+                      <button class="addbtn" (click)="adddata()">ADD</button>
+                  </div>
+                        
+                  <div class="updating" *ngIf="!visible" style="text-align: center;">
+                    <button class="btn btn-primary" (click)="updating(this.id)">Update</button>
+                  </div>
+               
+                 
+                
+            </div>
+            <br>
+            <br>
+
+
+
+            <div class="table_head" style="width: 100%;">
+                <h3>Employee Data</h3>
+                <hr style="background-color:#111743 ; height: 700px; height: 3px;">
+                <br>
+            </div>
+            <table class="container" style="border: 1px solid #111743; font-family:'Amiri', serif">
+                <tr style="background-color: #111743; color: blanchedalmond;">
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Emp_Id</th>
+                    <th>Designation</th>
+                    <th>Password</th>
+                    <th>Action</th>
+       
+       
+                </tr>
+                <tbody>
+                    <tr  (click)="send(val)" *ngFor="let val of employeeInfo, let i=index"   >
+                       <td>{{i+1}}</td>
+                       <td>{{employeeInfo[i].name}}</td>
+                       <td>{{employeeInfo[i].email}}</td>
+                       <td>{{employeeInfo[i].empid}}</td>
+                       <td>{{employeeInfo[i].des}}</td>
+                       <td>{{employeeInfo[i].pass}}</td>
+                       <td><button type="button" class=" btn btn-danger" (click)="delete(i)">Del</button>&nbsp;&nbsp;<button type="button" class="btn btn-info" (click)="edit(i)">Edit</button></td>
+       
+       
+                    </tr>
+                </tbody>
+            </table>
+            
+           </div>
+        
+     </div>
+
+     
