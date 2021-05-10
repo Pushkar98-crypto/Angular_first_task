@@ -86,6 +86,7 @@ export class AdmincomComponent implements OnInit {
   delete(item)
   {
     this.employeeInfo.splice(item,1);
+    localStorage.setItem('data',JSON.stringify(this.employeeInfo));
   }
 
   edit(index){

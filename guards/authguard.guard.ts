@@ -17,10 +17,16 @@ export class AuthguardGuard implements CanActivate {
     {
       return true
     }
-    else if(localStorage.getItem('tokenForAdmin'))
+    else if(localStorage.getItem('tokenForUser'))
     {
       return true
+      if (localStorage.getItem('tokenForId'))
+      {
+        return true
+      }
+
     }
+  
     
    {
       this.router.navigateByUrl('login')

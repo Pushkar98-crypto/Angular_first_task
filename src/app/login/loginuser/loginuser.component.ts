@@ -25,7 +25,8 @@ export class LoginuserComponent implements OnInit {
     if(this.authService.userlogin(this.email,this.pass,this.id))
     {
       this.router.navigate(['userlogin/emp/'+`${this.id}`])
-   
+      localStorage.setItem('tokenForid','allowed')
+       
     }
     
    }
