@@ -5,7 +5,7 @@ import {EmployeecomComponent} from './employee/employeecom/employeecom.component
 import {AdmincomComponent} from'./admin/admincom/admincom.component';
 import {LoginuserComponent} from './login/loginuser/loginuser.component';
 import {LoginadminComponent} from './login/loginadmin/loginadmin.component';
-import {AuthguardGuard } from 'guards/authguard.guard'
+import {AuthguardGuard } from './guards/authguard.guard'
 import {EmpdisplayComponent} from './admin/empdisplay/empdisplay.component';
 
 
